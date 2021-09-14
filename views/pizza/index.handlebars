@@ -1,0 +1,30 @@
+<form action="/pizza/add" method="GET">
+<h1>Pizza</h1>
+<div class="space_below">
+<button type="submit">Add pizza</button>
+</div>
+
+<table>
+	<tr>  
+		<th>Size</th>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+	{{#each pizzas}}
+	<tr>
+		<td>{{size}}</td>
+		<td>{{name}}</td>
+		<td>{{description}}</td>
+		<td>
+
+		</td>
+	</tr>
+	{{/each}}
+</table>
+</form>
+
+<div>
+<form action="/" method="get">
+	<button type="submit">Go to cart</button>
+</form>
+</div>

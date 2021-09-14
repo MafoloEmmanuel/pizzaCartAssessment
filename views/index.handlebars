@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PerfectPizza</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header" >
+      <h1>Perfect Pizza</h1>
+    </div>
+      <form action="/pizzas" method="GET">
+
+    <div class="cart" >
+      <h3>Shopping Cart</h3>
+      <img src="shopping-cart.png" alt="">
+
+        <table>
+          <tr>
+            <td><strong>Small </strong></td>
+            <td><span class="smallTotalPrice">0.00</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Medium</strong></td>
+            <td><span class="mediumTotalPrice">0.00</span></td>
+          </tr>
+          <tr>
+            <td><strong>Large </strong></td>
+            <td><span class="largeTotalPrice">0.00</span></td>
+          </tr>
+          <tr>
+            <td><strong>Total cost</strong></td>
+            <td><span class="totalPrice">0.00</span></td>
+          </tr>
+        </table>
+        <button class="btn" type="submit">Order</button>
+    </div>
+      </form>
+<form action="/buypizza" method="POST">
+    <div class="pizzas">
+       <div class="pizza large">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Large Pizza</h2>
+          <strong>R87.99</strong>
+          <div>
+            large margeritha pizza with 3 toppings max.
+            3 meat toppings max.
+            3 or less other toppings.
+          </div>
+        </div>
+        <div class="orderBox" >
+          <button class="btn orderLargePizza" style="margin-left: auto" value="large">Buy</button>
+        </div>
+      </div>
+      <div class="pizza medium">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Medium Pizza</h2>
+          <strong>R58.99</strong>
+
+          <div>
+            medium margeritha pizza with 3 toppings max.
+            2 or less meat topping.
+            3 or less other toppings.
+          </div>
+        </div>
+
+        <div class="orderBox">
+          <button class="btn orderMediumPizza" style="margin-left: auto" value="medium">Buy</button>
+        </div>
+
+      </div>
+     
+      <div class="pizza small">
+        <div class="info">
+          <img src="pizza.png"
+            alt="">
+          <h2>Small Pizza</h2>
+          <strong>R31.99</strong>
+          <div>
+            small pizza with 3 toppings
+              1 meat topping.
+              3 or less other toppings.
+          
+          </div>
+        </div>
+        <div class="orderBox">
+          <button class="btn orderSmallPizza" style="margin-left: auto" value="small">Buy</button>
+        </div>
+      </div>
+    </div>
+</form>
+    <div class="footer">
+      <div class="contact">
+        
+      </div>
+      
+    </div>
+      </form>
+  </div>
+</body>
+<hr>
+<div>
+  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</div>
+</html>
+</html>
