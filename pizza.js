@@ -7,28 +7,72 @@ module.exports = function PizzaCartEvent() {
     let smallTotal =0.00;
     let mediumTotal =0.00;
     let largeTotal = 0.00;
+    let smallCount =0;
+    let mediumCount =0;
+    let largeCount =0;
+    const orders =[]
 
+// show orders with statuses like payment due, paid and collected
+let orderStatus = ()=>{
+    const order = {
+        
+            orderId : orders.length+1,
+            status : "Payment due",
+            amount : totalCost()
+          }
+          orders.push(order)
+          
+    
+}
+//set the pizza prices
     let buyPizza = (choice) => {
         if (choice === "small") {
             smallTotal += smallCost;
+            smallCount++;
         } else if (choice === "medium") {
             mediumTotal += mediumCost;
+            mediumCount++;
         } else if (choice === "large") {
             largeTotal += largeCost;
+            largeCount++ ;
         }
     }
-let totalCost = ()=>{
-    total = smallTotal+mediumTotal+largeTotal;
-    console.log(total)
+    // get pizza prices for each size
+    let smallChoice = ()=>{
+        return smallTotal;
+    }
+    let mediumChoice =()=>{
+        return  mediumTotal;
+    }
+    let largeChoice= ()=>{
+        return   largeTotal;
+    }
+    // count pizzas
+    let countSmall =() =>{
+        return smallCount;
+    }
+    let countMedium = ()=>{
+        return mediumCount;
+    }
+    let countLarge = ()=>{
+        return largeCount;
+    }
 
-    return total;
+let totalCost = ()=>{
+total = smallChoice()+mediumChoice()+largeChoice();
+console.log(total)
+    return "R" + total
 }
-let totalSize=()=>{
-    return buyPizza()
-}
+
     return {
         buyPizza,
+        smallChoice,
+        mediumChoice,
+        largeChoice,
         totalCost,
-        totalSize
+        countLarge,
+        countMedium,
+        countSmall,
+        orderStatus
     }
 }
