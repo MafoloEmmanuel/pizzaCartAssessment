@@ -52,11 +52,13 @@ app.post('/buypizza', (req, res) => {
     res.redirect('/')
 })
 app.get('/orderpizza', (req,res)=>{
-    res.render('checkout')
+    res.render('orders',{
+        orderList: pizza.orderStatus()
+
+    })
 })
 app.get('/checkOrders',(req,res) =>{
-    res.render('orders', {
-        orderList: pizza.orderStatus()
+    res.render('checkout', {
     })
 })
 app.listen(PORT, () => {

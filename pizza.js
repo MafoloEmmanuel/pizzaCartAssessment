@@ -60,8 +60,7 @@ let orderStatus = ()=>{
 
 let totalCost = ()=>{
 total = smallChoice()+mediumChoice()+largeChoice();
-console.log(total)
-    return "R" + total
+    return "R" + total.toFixed(2)
 }
 
     return {

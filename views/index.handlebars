@@ -22,29 +22,31 @@
         <table>
           <tr>
             <td><strong>Small </strong></td>
-            <td><span class="smallTotalPrice">{{smallCount}} x {{smallPrice}}</span></td>
+            <td><span class="smallTotalPrice">{{smallCount}} x R{{smallPrice}}</span></td>
           </tr>
 
           <tr>
             <td><strong>Medium</strong></td>
-            <td><span class="mediumTotalPrice">{{mediumCount}} x {{mediumPrice}}</span></td>
+            <td><span class="mediumTotalPrice">{{mediumCount}} x R{{mediumPrice}}</span></td>
           </tr>
           <tr>
             <td><strong>Large </strong></td>
-            <td><span class="largeTotalPrice">{{largeCount}} x {{largePrice}}</span></td>
+            <td><span class="largeTotalPrice">{{largeCount}} x R{{largePrice}}</span></td>
           </tr>
           <tr>
             <td><strong>Total cost</strong></td>
             <td><span class="totalPrice">{{totalCost}}</span></td>
           </tr>
         </table>
-        <button class="btn" type="submit">Proceed to checkout</button>
+         <button type="submit" class="btn"> View orders</button>
+    
     </div>
     </form>
     <form action="/checkOrders" method="get">
-    <div>
-      <button type="submit" class="btn"> View orders</button>
-    </div>
+        <button class="btn" type="submit">Proceed to checkout</button>
+
+    
+     
     </form>
       
 <form action="/buypizza" method="POST">
